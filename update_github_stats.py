@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 GIT_TOKEN = os.getenv("GIT_TOKEN")
-USERNAME = "YOUR_GITHUB_ID"  # 👉 본인 GitHub 아이디로 수정
+USERNAME = "yuchael"  # 👉 본인 GitHub 아이디로 수정
 
 HEADERS = {
     "Authorization": f"token {GIT_TOKEN}"
@@ -18,8 +18,8 @@ HEADERS = {
 README_PATH = "README.md"
 
 def get_github_stats():
-    url = f"https://api.github.com/users/{yuchael}"
-    repos_url = f"https://api.github.com/users/{yuchael}/repos"
+    url = f"https://api.github.com/users/{USERNAME}"
+    repos_url = f"https://api.github.com/users/{USERNAME}/repos"
 
     user_res = requests.get(url, headers=HEADERS)
     repos_res = requests.get(repos_url, headers=HEADERS)
